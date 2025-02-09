@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gift Chocolate to Your Girlfriend</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #ffebee;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 40px;
+      color: #d32f2f;
+      margin-bottom: 30px;
+      animation: fadeIn 2s ease-out;
+    }
+
+    .gift-box {
+      width: 200px;
+      height: 200px;
+      background-color: #3e2723;
+      border-radius: 20px;
+      position: relative;
+      display: none;
+      margin: 20px auto;
+      animation: bounce 1s ease-out forwards;
+    }
+
+    .gift-box::before {
+      content: "🍫";
+      font-size: 50px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .message {
+      font-size: 24px;
+      color: #c2185b;
+      margin-top: 20px;
+      display: none;
+      animation: fadeIn 2s ease-out;
+    }
+
+    .btn {
+      background-color: #d32f2f;
+      color: white;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 10px;
+      font-size: 20px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #c2185b;
+    }
+
+    @keyframes bounce {
+      0% {
+        transform: translateY(-100px);
+      }
+      50% {
+        transform: translateY(20px);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <h1>Gift a Chocolate to Your Girlfriend</h1>
+    <button class="btn" onclick="giftChocolate()">Gift Chocolate</button>
+
+    <div class="gift-box" id="giftBox"></div>
+    <p class="message" id="message">Here's a sweet chocolate for you, my love! 🍫💖</p>
+  </div>
+
+  <script>
+    function giftChocolate() {
+    
+      document.getElementById("giftBox").style.display = "block";
+      document.getElementById("message").style.display = "block";
+    }
+  </script>
+</body>
+</html>
